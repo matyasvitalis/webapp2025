@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import java.util.Date;
 import java.util.UUID;
 
 @Data
@@ -18,7 +18,9 @@ public class GameTitle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
-
     private String gameTitle;
+
+    @Column(name = "Release_date")
+    private Date releaseDate;
 
 }
