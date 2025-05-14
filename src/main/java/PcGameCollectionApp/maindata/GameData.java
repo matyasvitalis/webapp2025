@@ -20,7 +20,7 @@ public class GameData {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String gameTitle;
-    private String Developer;
+    private String developer;
 
     @Column (name = "releaseDate")
     private Date releaseDate;

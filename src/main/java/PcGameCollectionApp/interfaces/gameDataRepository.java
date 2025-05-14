@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface GameDataRepository extends JpaRepository<GameData, UUID> {
+public interface gameDataRepository extends JpaRepository<GameData, UUID> {
 }

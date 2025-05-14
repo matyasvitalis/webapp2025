@@ -16,7 +16,7 @@ public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID publisher_id;
-    private String publisher_name;
+    private UUID id;
+    private String name;
 
 }

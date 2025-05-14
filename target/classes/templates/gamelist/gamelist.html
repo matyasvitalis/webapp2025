@@ -14,9 +14,17 @@
         <thead>
     <tr>
         <th>Játék neve</th>
+        <th>Kiadás dátuma</th>
+        <th>Fejlesztő</th>
         <th>Kiadó</th>
     </tr>
         </thead>
+        <tr th:each="game : ${games}">
+            <td th:text="${game.gameTitle}">John Doe</td>
+            <td th:text="${#dates.format(game.releaseDate, 'yyyy-MM-dd')}">1980-01-01</td>
+            <td th:text="${game.developer}">John Doe</td>
+            <td th:text="${game.publisher.name}">Publisher Name</td>
+        </tr>
     </table>
 </main>
 <footer>
