@@ -1,9 +1,6 @@
 package PcGameCollectionApp.maindata;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,12 +12,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Developer {
+public class Publisher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
-
-    private String name;
+    private UUID publisher_id;
+    private String publisher_name;
 
 }
