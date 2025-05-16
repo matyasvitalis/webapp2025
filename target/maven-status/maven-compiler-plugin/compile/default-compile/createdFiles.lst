@@ -1,0 +1,14 @@
+PcGameCollectionApp\website\HomePageController.class
+PcGameCollectionApp\interfaces\gameDataRepository.class
+PcGameCollectionApp\service\publisherService.class
+PcGameCollectionApp\maindata\GameData.class
+PcGameCollectionApp\interfaces\publisherRepository.class
+PcGameCollectionApp\maindata\Publisher$PublisherBuilder.class
+PcGameCollectionApp\maindata\Publisher.class
+PcGameCollectionApp\MainApplication.class
+PcGameCollectionApp\service\gameDataService.class
+PcGameCollectionApp\website\publisherPageController.class
+PcGameCollectionApp\website\api\gameDataRESTController.class
+PcGameCollectionApp\website\api\publisherDataRESTController.class
+PcGameCollectionApp\maindata\GameData$GameDataBuilder.class
+PcGameCollectionApp\website\GamePageController.class
