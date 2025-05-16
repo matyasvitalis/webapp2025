@@ -30,6 +30,7 @@ button:hover {
   background-color: #2980b9;
 }
 
+/*Tablazat*/
 .styled-table {
     width: 100%;
     border-collapse: collapse;
@@ -38,12 +39,14 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/*Tablazat felso szovegeinek szine*/
 .styled-table thead tr {
     background-color: #4CAF50;
     color: #ffffff;
     text-align: left;
 }
 
+/*Tablazat cellainak merete*/
 .styled-table th,
 .styled-table td {
     padding: 12px 15px;

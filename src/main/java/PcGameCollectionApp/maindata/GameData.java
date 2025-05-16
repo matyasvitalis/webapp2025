@@ -21,7 +21,6 @@ public class GameData {
     private UUID id;
     private String gameTitle;
     private String developer;
-
     @Column (name = "releaseDate")
     private Date releaseDate;
 
