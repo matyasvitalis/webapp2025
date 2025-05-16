@@ -39,9 +39,9 @@ button:hover {
     margin-bottom: 20px;
 }
 
-/*Tablazat felso szovegeinek szine*/
+/*Tablazat felso tablazat / szoveg szine */
 .styled-table thead tr {
-    background-color: #4CAF50;
+    background-color: #3366ff;
     color: #ffffff;
     text-align: left;
 }
@@ -49,7 +49,7 @@ button:hover {
 /*Tablazat cellainak merete*/
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+    padding: 10px 12px;
     border: 1px solid #ddd;
 }
 

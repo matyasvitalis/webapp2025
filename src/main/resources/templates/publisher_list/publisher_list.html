@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Kiadók listája</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
-
+<div class="container">
+    <header>
+        <h1> Kiadók listája </h1>
+    </header>
+    <main>
+        <div th:if="${error}" class="alert alert-danger" style="color:red; text-align:center;">
+            <p th:text="${error}"></p>
+        </div>
+        <table class="styled-table">
+            <thead>
+            <tr>
+                <th>Kiadó neve</th>
+                <th>Művelet</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="publisher : ${publishers}">
+                <td th:text="${publisher.name}">John Doe</td>
+                <td>
+                    <a th:href="@{'/publisher_list/delete/' + ${publisher.id}}"
+                       onclick="return confirm('Biztos hogy törölni akarod ezt a kiadót?');">
+                        Törlés
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+    </main>
+    <table style="margin: 0 auto;">
+        <tr>
+            <td><a href="/publisher_list/new" class="button">Új kiadó hozzáadása</a></td>
+            <td><a href="/" class="button">Vissza</a></td>
+        </tr>
+    </table>
+    </div>
 </body>
 </html>

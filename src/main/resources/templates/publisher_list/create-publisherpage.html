@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Kiadó hozzáadása</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Új kiadó hozzáadása</h1>
+    </header>
+    <main>
+        <form th:action="@{/publisher_list/add}" th:object="${publisher}" method="post">
+        <table>
+            <tr>
+                <label for="name">Kiadó neve:</label>
+                <input type="text" id="name" th:field="*{name}" required />
+                <button type="submit">Mentés</button>
+            </tr>
+        </table>
+    </form>
+    </main>
+</div>
+</body>
+</html>

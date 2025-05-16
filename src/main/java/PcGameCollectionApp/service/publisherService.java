@@ -16,6 +16,8 @@ public class publisherService {
 
     @Autowired
     private publisherRepository pubRepository;
+    @Autowired
+    private gameDataRepository gameDataRepository;
 
     public List<Publisher> getAllPublisher() {
         return pubRepository.findAll();
@@ -39,5 +41,9 @@ public class publisherService {
     }
     public void deleteById(UUID id) {
         pubRepository.deleteById(id);
+    }
+
+    public boolean hasGames(UUID publisherId) {
+        return !gameDataRepository.findByPublisherId(publisherId).isEmpty();
     }
 }
