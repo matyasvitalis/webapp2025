@@ -10,24 +10,26 @@
         <h1>Új játék hozzáadása</h1>
     </header>
     <main><form th:action="@{/gamelist/add}" th:object="${gameData}" method="post">
-        <label for="gameTitle">Game Title:</label>
-        <input type="text" id="gameTitle" th:field="*{gameTitle}" required />
-
-        <label for="developer">Developer:</label>
-        <input type="text" id="developer" th:field="*{developer}" required />
-
-        <label for="releaseDate">Release Date:</label>
-        <input type="date" id="releaseDate" th:field="*{releaseDate}" required />
-
-        <label for="publisher">Publisher:</label>
+        <label for="gameTitle">Játék neve:</label>
+        <input type="text" id="gameTitle" th:field="*{gameTitle}" szükséges />
+        <br>
+        <label for="developer">Fejlesztő:</label>
+        <input type="text" id="developer" th:field="*{developer}" szükséges />
+        <br>
+        <label for="releaseDate">Megjelenés dátuma:</label>
+        <input type="date" id="releaseDate" th:field="*{releaseDate}" szükséges />
+        <br>
+        <label for="publisher">Kiadó:</label>
         <select th:field="*{publisher.id}" id="publisher">
             <option th:each="pub : ${publishers}"
                     th:value="${pub.id}"
-                    th:text="${pub.name}">Publisher Name</option>
+                    th:text="${pub.name}">Kiadó neve</option>
         </select>
-        <button type="submit">Add Game</button>
+        <br>
+        <button type="submit">Játék hozzáadása</button>
     </form>
-        <a href="/gamelist/lista" class="button">Vissza</a>
+        <br>
+        <div style="text-align: center;"><a href="/gamelist/lista" class="button">Vissza</a></div>
     </main>
 </div>
 </body>
