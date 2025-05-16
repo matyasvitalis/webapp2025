@@ -18,7 +18,7 @@ jobs:
       - name: JDK beállítása
         uses: actions/setup-java@v3
         with:
-          java-version: '17' # vagy amilyen verziót használsz
+          java-version: '17'
           distribution: 'temurin'
 
       - name: Maven cache
