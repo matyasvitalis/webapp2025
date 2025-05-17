@@ -5,6 +5,7 @@ import PcGameCollectionApp.interfaces.publisherRepository;
 import PcGameCollectionApp.maindata.GameData;
 import PcGameCollectionApp.maindata.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class publisherService {
     private gameDataRepository gameDataRepository;
 
     public List<Publisher> getAllPublisher() {
-        return pubRepository.findAll();
+        return pubRepository.findAll(Sort.by(Sort.Direction.ASC, "name"));
     }
 
     public Publisher save(Publisher publisher) {
