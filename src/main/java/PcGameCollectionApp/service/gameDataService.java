@@ -3,6 +3,7 @@ package PcGameCollectionApp.service;
 import PcGameCollectionApp.interfaces.gameDataRepository;
 import PcGameCollectionApp.maindata.GameData;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class gameDataService {
     private gameDataRepository gameDataRepository;
 
     public List<GameData> getAllGames() {
-        return gameDataRepository.findAll();
+        return gameDataRepository.findAll(Sort.by(Sort.Direction.ASC, "gameTitle"));
     }
 
     public GameData save(GameData game) {
